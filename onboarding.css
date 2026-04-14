@@ -194,3 +194,57 @@ select {
     appearance: none;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .form-section {
+        max-width: 100%;
+        padding: 120px 16px 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .onboarding-form {
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .terms-container,
+    .consent,
+    .addons label {
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .submit-confirmation-card {
+        padding: 32px 20px;
+    }
+
+    .submit-confirmation-card p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .form-section {
+        padding-top: 112px;
+    }
+
+    .submit-confirmation-card h2 {
+        font-size: 2.4rem;
+    }
+
+    .submit-confirmation-card p {
+        font-size: 1.3rem;
+    }
+}

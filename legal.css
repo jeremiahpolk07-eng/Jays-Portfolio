@@ -68,6 +68,27 @@ body.privacy-page {
     font-size: 1.4rem;
 }
 
+@media (max-width: 900px) {
+    .legal-section {
+        padding: 126px 18px 44px;
+    }
+
+    .legal-card {
+        padding: 30px 22px;
+    }
+
+    .legal-card .legal-intro,
+    .legal-block p,
+    .legal-block li {
+        font-size: 1.35rem;
+        line-height: 1.75;
+    }
+
+    .legal-block h2 {
+        font-size: 1.8rem;
+    }
+}
+
 @media (max-width: 640px) {
     .legal-card {
         padding: 28px 18px;
@@ -75,5 +96,16 @@ body.privacy-page {
 
     .legal-section {
         padding: 120px 16px 40px;
+    }
+
+    .legal-card h1 {
+        font-size: 2.3rem;
+    }
+
+    .legal-card .legal-intro,
+    .legal-block p,
+    .legal-block li,
+    .legal-back-link {
+        font-size: 1.2rem;
     }
 }

@@ -1100,7 +1100,7 @@ section{
     display: none;
   }
 
-  .navbar {
+    #navbar {
     position: fixed;
     top: 70px;
     left: 0;
@@ -1120,12 +1120,12 @@ section{
         transition: max-height 0.35s ease, opacity 0.25s ease;
   }
 
-  .navbar.open {
+    #navbar.open {
         max-height: 40rem;
         opacity: 1;
   }
 
-  .navbar a {
+    #navbar a {
     font-size: 1.1rem;
     padding: 1rem 2rem;
     width: 100%;
@@ -1134,18 +1134,18 @@ section{
     transition: background 0.3s, color 0.3s;
   }
 
-  .navbar a:last-child {
+    #navbar a:last-child {
     border-bottom: none;
   }
 
-  .navbar a:hover {
+    #navbar a:hover {
     background: rgba(65, 105, 225, 0.15);
     color: #4169E1;
   }
 }
 
 @media (min-width: 1025px) {
-    .navbar {
+        #navbar {
         display: block;
         max-height: none;
         opacity: 1;
@@ -2641,5 +2641,229 @@ body.projects-page .button-row a:hover {
 
     body.projects-page .button-row a {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .home {
+        padding-top: 14rem;
+    }
+
+    .home-content {
+        gap: 2.4rem;
+        padding: 2.4rem 1.8rem;
+    }
+
+    .home-content::before,
+    .home-content::after {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .home-text h1,
+    .hero h1,
+    .about-text h2,
+    .services h2,
+    .projects h2,
+    .contact h2,
+    .pricing-hero h1,
+    .pricing-home-intro h2,
+    .pricing-faq-section h2,
+    .pricing-bottom-cta h2,
+    .pricing-addons-section h2,
+    .pricing-subs-section h2 {
+        font-size: 3.2rem;
+    }
+
+    .home-text h3,
+    .about-text h3 {
+        font-size: 2rem;
+    }
+
+    .home-text p,
+    .subtext,
+    .services-sub,
+    .projects-sub,
+    .contact-sub,
+    .pricing-hero p,
+    .pricing-home-intro p:last-child,
+    .pricing-bottom-cta p,
+    .pricing-addons-sub,
+    body.projects-page .projects-intro p {
+        font-size: 1.5rem;
+    }
+
+    .home-live-line {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #service-rotator {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .home-highlights {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .home-img img,
+    .about-img img {
+        width: min(32rem, 82vw);
+        height: min(32rem, 82vw);
+    }
+
+    .services,
+    .services-grid,
+    .projects-grid {
+        gap: 1.8rem;
+    }
+
+    .service-card,
+    .project-card,
+    .coming-soon-card,
+    .work-card {
+        width: 100%;
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-card,
+    .work-card {
+        padding: 2.6rem 2rem;
+    }
+
+    .project-info,
+    .pricing-card,
+    .pricing-bottom-cta-inner,
+    .faq-question,
+    .faq-item.open .faq-answer,
+    .faq-answer {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+    }
+
+    .project-links,
+    .form-row {
+        flex-direction: column;
+    }
+
+    .project-links .btn,
+    .contact-form .btn,
+    .pricing-card .btn,
+    .pricing-bottom-cta .btn,
+    body.projects-page .button-row a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-form {
+        gap: 1.6rem;
+    }
+
+    .form-row {
+        gap: 1.2rem;
+    }
+
+    .pricing-hero,
+    .pricing-section,
+    .pricing-addons-section,
+    .pricing-subs-section,
+    .pricing-faq-section,
+    .pricing-bottom-cta,
+    .pricing-home-section,
+    body.projects-page .hero,
+    body.projects-page .button-row {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .pricing-hero {
+        padding-top: 13rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .pricing-grid,
+    .pricing-subs-grid,
+    .addon-grid {
+        grid-template-columns: 1fr;
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-card,
+    .addon-card {
+        text-align: left;
+    }
+
+    .pricing-badge {
+        white-space: normal;
+        width: max-content;
+        max-width: calc(100% - 3rem);
+        text-align: center;
+    }
+
+    .pricing-price {
+        flex-wrap: wrap;
+    }
+
+    .faq-question {
+        align-items: flex-start;
+    }
+
+    body.projects-page .hero {
+        padding-top: 12.5rem;
+        padding-bottom: 2rem;
+    }
+
+    body.projects-page .projects-intro {
+        width: 100%;
+    }
+
+    body.projects-page .button-row {
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .home-text h1,
+    .hero h1,
+    .about-text h2,
+    .services h2,
+    .projects h2,
+    .contact h2,
+    .pricing-hero h1,
+    .pricing-home-intro h2,
+    .pricing-faq-section h2,
+    .pricing-bottom-cta h2,
+    .pricing-addons-section h2,
+    .pricing-subs-section h2 {
+        font-size: 2.8rem;
+    }
+
+    .btn,
+    .btn-group .btn,
+    .pricing-card .btn,
+    .pricing-bottom-cta .btn,
+    .contact-form .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .offer-list {
+        gap: 0.8rem;
+    }
+
+    .offer-pill {
+        width: 100%;
+        text-align: center;
     }
 }
