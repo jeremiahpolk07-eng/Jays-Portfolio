@@ -1665,6 +1665,7 @@ body.privacy-page .side-nav-logo img {
     body.pricing-page .menu-toggle,
     body.projects-page .menu-toggle,
     body.about-page .menu-toggle,
+    body.onboarding-page .menu-toggle,
     body.terms-page .menu-toggle,
     body.privacy-page .menu-toggle {
         display: block;
@@ -1674,6 +1675,7 @@ body.privacy-page .side-nav-logo img {
     body.pricing-page .navbar nav,
     body.projects-page .navbar nav,
     body.about-page .navbar nav,
+    body.onboarding-page .navbar nav,
     body.terms-page .navbar nav,
     body.privacy-page .navbar nav {
         display: none;
