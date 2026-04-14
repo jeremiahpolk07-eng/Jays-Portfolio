@@ -1678,7 +1678,41 @@ body.privacy-page .side-nav-logo img {
     body.onboarding-page .navbar nav,
     body.terms-page .navbar nav,
     body.privacy-page .navbar nav {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+    }
+
+    body.home-page .navbar nav a:not(.nav-logo),
+    body.pricing-page .navbar nav a:not(.nav-logo),
+    body.projects-page .navbar nav a:not(.nav-logo),
+    body.about-page .navbar nav a:not(.nav-logo),
+    body.onboarding-page .navbar nav a:not(.nav-logo),
+    body.terms-page .navbar nav a:not(.nav-logo),
+    body.privacy-page .navbar nav a:not(.nav-logo) {
         display: none;
+    }
+
+    body.home-page .nav-logo,
+    body.pricing-page .nav-logo,
+    body.projects-page .nav-logo,
+    body.about-page .nav-logo,
+    body.onboarding-page .nav-logo,
+    body.terms-page .nav-logo,
+    body.privacy-page .nav-logo {
+        display: inline-flex;
+        margin: 0;
+    }
+
+    body.home-page .nav-logo img,
+    body.pricing-page .nav-logo img,
+    body.projects-page .nav-logo img,
+    body.about-page .nav-logo img,
+    body.onboarding-page .nav-logo img,
+    body.terms-page .nav-logo img,
+    body.privacy-page .nav-logo img {
+        width: 96px;
     }
 }
 
