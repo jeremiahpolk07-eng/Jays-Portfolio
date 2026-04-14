@@ -1548,7 +1548,10 @@ body.pricing-page .addons-panel p {
 body.home-page .menu-toggle,
 body.pricing-page .menu-toggle,
 body.projects-page .menu-toggle,
-body.about-page .menu-toggle {
+body.about-page .menu-toggle,
+body.onboarding-page .menu-toggle,
+body.terms-page .menu-toggle,
+body.privacy-page .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
@@ -2484,28 +2487,40 @@ body.home-page .hero-image img {
     body.home-page .navbar,
     body.pricing-page .navbar,
     body.projects-page .navbar,
-    body.about-page .navbar {
+    body.about-page .navbar,
+    body.onboarding-page .navbar,
+    body.terms-page .navbar,
+    body.privacy-page .navbar {
         padding: 16px 22px;
     }
 
     body.home-page .navbar nav,
     body.pricing-page .navbar nav,
     body.projects-page .navbar nav,
-    body.about-page .navbar nav {
+    body.about-page .navbar nav,
+    body.onboarding-page .navbar nav,
+    body.terms-page .navbar nav,
+    body.privacy-page .navbar nav {
         gap: 1.2rem;
     }
 
     body.home-page nav a,
     body.pricing-page nav a,
     body.projects-page nav a,
-    body.about-page nav a {
+    body.about-page nav a,
+    body.onboarding-page nav a,
+    body.terms-page nav a,
+    body.privacy-page nav a {
         font-size: 13px;
     }
 
     body.home-page .nav-logo img,
     body.pricing-page .nav-logo img,
     body.projects-page .nav-logo img,
-    body.about-page .nav-logo img {
+    body.about-page .nav-logo img,
+    body.onboarding-page .nav-logo img,
+    body.terms-page .nav-logo img,
+    body.privacy-page .nav-logo img {
         width: 95px;
     }
 
