@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZNstackz</title>
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body class="home-page">
+
+    <header class="navbar">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#home" class="nav-logo" aria-label="SZN Stackz Home">
+          <img src="SZN Stackz Logo Clear Background.png" alt="SZN Stackz logo">
+        </a>
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-btn">Contact Me</a>
+      </nav>
+    </header>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <div class="side-nav" id="side-nav">
+      <div class="close-btn" id="close-btn">✕</div>
+
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact Me</a>
+
+      <div class="side-nav-logo">
+        <img src="SZN stackz Full Logo clear background.png" alt="SZN Stackz full logo">
+      </div>
+    </div>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <h1>
+          Build Your Digital Presence <br>
+          <span>One Season at a&nbsp;Time</span>
+        </h1>
+
+        <div class="hero-info-card">
+          <p>
+            Each season marks a purposeful step in your digital evolution.
+            We guide you layer by layer, turning each season of your growth
+            into a fully realized digital presence.
+          </p>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="#services" class="btn primary">Get Started</a>
+          <a href="#projects" class="btn secondary">View Work</a>
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="SZN stackz Full Logo clear background.png" alt="3D logo">
+      </div>
+
+    </section>
+
+    <section class="services" id="services">
+
+      <div class="service-card">
+        <h3>App Development</h3>
+        <p>Custom mobile &amp; web apps tailored to your business goals.</p>
+        <a href="" class="btn primary">Coming soon</a>
+      </div>
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>High-performance, responsive websites built from scratch.</p>
+        <a href="#contact" class="btn primary">Book Consult Now</a>
+        <a href="pricing.html" class="btn secondary">View Pricing</a>
+      </div>
+      <div class="service-card">
+        <h3>Brand Design</h3>
+        <p>Logos and visuals that make your brand unforgettable.</p>
+        <a href="#contact" class="btn primary">Book Now</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content-wrap">
+            <div class="about-img">
+                <img src="head shot.jpeg" alt="Founder portrait">
+            </div>
+            <div class="about-text">
+                <h2><span>Founder & developer</span></h2>
+                <p>I'm <strong>NOT</strong> your typical Computer Science student, and I <strong>NEVER</strong> planned to be.</p>
+                <p>Born in Portsmouth, Virginia and now based in Atlanta, I'm a 20-year-old creative and tech-driven mind currently studying Computer Science at Voorhees University. While I'm building my path toward becoming a professional software developer, my story doesn't just live behind a screen - it moves, performs, and creates in real life.</p>
+                <p>From being dancer and choreographer who has performed with numerous artists, turning ideas into energy on stage. That same drive carries into athletics competing in track and field, specializing in the 400m hurdles, 110m hurdles, and 800m, where discipline, endurance, and precision matter just as much as talent.</p>
+                <p>What makes me different is how I blend worlds. I can go from performing on stage to solving problems in code, from creative direction to technical execution. I understand both structure and expression - and I use that balance to stand out in every space I enter.</p>
+                <p>At the core, I'm a builder. Whether it's choreography, a personal brand, or future software, I create with intention and this is <em><strong>just the beginning.</strong></em></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon"><i class="bx bx-code-curly"></i></div>
+        <div class="divider-line"></div>
+    </div>
+    <section class="projects" id="projects">
+      <h2><img src="Futuristic SZN Creations logo design.png" alt="SZN Creations logo" class="projects-logo"></h2>
+      <p class="projects-sub">A showcase of results we have delivered for clients. More case studies coming soon.</p>
+        <div class="projects-grid">
+
+            <div class="work-card">
+              <div class="work-overlay"></div>
+
+              <h2>Client Work <span>Coming Soon</span></h2>
+              <p>
+                We are preparing new client showcases so you can experience
+                the quality, performance, and design behind our latest builds.
+              </p>
+
+              <div class="work-tags">
+                <span>Web Design</span>
+                <span>App Development</span>
+                <span>Brand Identity</span>
+              </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <canvas id="contactBinaryCanvas" class="contact-binary-canvas" aria-hidden="true"></canvas>
+        <h2>Contact <span>Me</span></h2>
+        <p class="contact-sub">Have a question or want to work together? Fill out the form below.</p>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xykbrkly" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Reason for Contact</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select a reason</option>
+                        <option value="website">Website Development</option>
+                        <option value="collaboration">Collaboration / Partnership</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me more about what you need..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <p class="form-status" id="form-status"></p>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const data = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            status.textContent = "Message sent! I'll be in touch soon.";
+            status.style.color = '#4caf50';
+            form.reset();
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.style.color = '#f44336';
+          }
+        });
+      }
+    </script>
+</body>
+</html>

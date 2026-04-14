@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — SZN Stackz Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body class="pricing-page">
+
+    <canvas id="matrix-canvas"></canvas>
+
+        <header class="navbar">
+            <nav>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#home" class="nav-logo" aria-label="SZN Stackz Home">
+                    <img src="SZN Stackz Logo Clear Background.png" alt="SZN Stackz logo">
+                </a>
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact" class="nav-btn">Contact Me</a>
+            </nav>
+    </header>
+
+        <div class="menu-toggle" id="menu-toggle">
+          ☰
+        </div>
+
+        <div class="side-nav" id="side-nav">
+          <div class="close-btn" id="close-btn">✕</div>
+
+          <a href="index.html#home">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#projects">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact Me</a>
+
+          <div class="side-nav-logo">
+            <img src="SZN stackz Full Logo clear background.png" alt="SZN Stackz full logo">
+          </div>
+        </div>
+
+    <section class="pricing-section">
+      <div class="pricing-container">
+
+        <div class="card basic">
+          <h2>Basic</h2>
+          <p class="price">$50</p>
+          <ul>
+            <li>Custom Homepage</li>
+            <li>About Page</li>
+            <li>Services Page</li>
+            <li>Contact Form (Email)</li>
+          </ul>
+          <a href="onboarding.html?package=Basic" class="pricing-cta">Get Started</a>
+        </div>
+
+        <div class="card modern">
+          <span class="badge">Most Popular</span>
+          <h2>Modern</h2>
+          <p class="price">$100</p>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Multi-page Design</li>
+            <li>SEO Setup</li>
+            <li>Domain Management</li>
+            <li>Payment Integration</li>
+          </ul>
+          <a href="onboarding.html?package=Modern" class="pricing-cta">Get Started</a>
+        </div>
+
+        <div class="card luxury">
+          <h2>Luxury</h2>
+          <p class="price">$150</p>
+          <ul>
+            <li>Everything in Modern</li>
+            <li>Payment Integration</li>
+            <li>Custom Animations</li>
+            <li>Premium UI/UX</li>
+          </ul>
+          <a href="onboarding.html?package=Luxury" class="pricing-cta">Get Started</a>
+        </div>
+
+      </div>
+
+      <div class="pricing-info-row">
+        <div class="subscription">
+          <h2>Maintenance Plans</h2>
+          <p>Monthly: $15 - $50</p>
+          <p>Yearly: $100 - $150</p>
+        </div>
+
+        <div class="subscription addons-panel">
+          <h2>Add-ons</h2>
+          <p>Appointment Booking: $10</p>
+          <p>E-Commerce Setup: $15</p>
+          <p>Custom Animations: $15</p>
+          <p>Gallery, Live Chat, SEO, Reviews: $10 - $15</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Matrix canvas -->
+    <script>
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            columns = Math.floor(canvas.width / fontSize);
+            drops = Array(columns).fill(1);
+        });
+
+        const fontSize = 16;
+        const chars = '10';
+        let columns = Math.floor(canvas.width / fontSize);
+        let drops = Array(columns).fill(1);
+        const colors = ['#4169E1', '#6A0DAD', '#7B2FBE', '#3333ff', '#9400D3'];
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(6, 10, 24, 0.06)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.font = fontSize + 'px monospace';
+                ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 40);
+    </script>
+
+    <!-- FAQ accordion -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+
+    <!-- Mobile nav toggle (same as index) -->
+    <script>
+        const toggle = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        if (toggle && navbar) {
+            toggle.addEventListener('click', () => {
+                const isOpen = navbar.classList.toggle('open');
+                toggle.classList.toggle('open', isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
+
+</body>
+</html>
