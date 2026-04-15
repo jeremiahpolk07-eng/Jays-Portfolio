@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body class="home-page">
+    <div id="intro">
+      <video autoplay muted playsinline id="introVideo">
+        <source src="intro.mp4" type="video/mp4">
+      </video>
+      <div class="intro-content">
+        <img class="intro-logo" src="SZN stackz Full Logo clear background.png" alt="SZN Stackz">
+        <p class="intro-tag">Every Season Builds</p>
+      </div>
+    </div>
 
     <header class="navbar">
       <nav>
@@ -67,6 +79,7 @@
 
       <div class="hero-image">
         <img src="SZN stackz Full Logo clear background.png" alt="3D logo">
+        <div class="floating"></div>
       </div>
 
     </section>
@@ -180,6 +193,69 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+      const lenis = new Lenis({
+        duration: 1.2,
+        smooth: true,
+        smoothTouch: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".stagger-text span", {
+        y: 0,
+        opacity: 1,
+        stagger: 0.15,
+        duration: 1,
+        ease: "power4.out"
+      });
+      gsap.to(".floating", {
+        y: 100,
+        scrollTrigger: {
+          trigger: ".floating",
+          scrub: true
+        }
+      });
+    </script>
+    <script>
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+      window.addEventListener('resize', () => {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+      });
+
+      const tl = gsap.timeline();
+
+      tl.fromTo(".intro-logo",
+        { opacity: 0, scale: 0.9, filter: "blur(10px)" },
+        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.2 }
+      );
+
+      tl.fromTo(".intro-tag",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1 },
+        "-=0.6"
+      );
+
+      tl.to(".intro-content", {
+        scale: 1.05,
+        duration: 0.6
+      });
+
+      tl.to("#intro", {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+          document.getElementById("intro").style.display = "none";
+        }
+      });
+    </script>
     <script>
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
