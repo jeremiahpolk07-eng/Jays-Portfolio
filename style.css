@@ -2163,6 +2163,15 @@ body.home-page {
 }
 
 /* NAVBAR */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1.35rem;
+    color: #556688;
+    background: transparent;
+    letter-spacing: 0.04rem;
+}
+
 body.home-page .navbar,
 body.pricing-page .navbar,
 body.projects-page .navbar,

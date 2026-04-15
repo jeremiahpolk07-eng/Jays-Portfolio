@@ -27,8 +27,8 @@ body.onboarding-page {
 h1 {
     font-size: 2.5rem;
     background: linear-gradient(90deg, #4facfe, #a855f7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .onboarding-form {
@@ -74,7 +74,7 @@ textarea {
 .addons {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 8px;
     text-align: left;
 }
