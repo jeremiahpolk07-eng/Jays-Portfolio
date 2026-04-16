@@ -6,6 +6,7 @@
     <title>SZNstackz</title>
     <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -91,7 +92,7 @@
       <div class="service-card">
         <h3>Web Development</h3>
         <p>High-performance, responsive websites built from scratch.</p>
-        <a href="#contact" class="btn primary">Book Consult Now</a>
+        <a href="https://calendly.com/jeremiahpolk07/30min" class="btn primary book-consult-link">Book Consult Now</a>
         <a href="pricing.html" class="btn secondary">View Pricing</a>
       </div>
       <div class="service-card">
@@ -189,6 +190,14 @@
       &copy; 2026 SZN Stackz Co.
     </div>
 
+    <section class="consult-confirmation" id="consultConfirmation" aria-live="polite" hidden>
+      <div class="consult-confirmation-card">
+        <h2>Thank You</h2>
+        <p>Your consultation has been scheduled. We are excited to build with you this season.</p>
+      </div>
+    </section>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="script.js"></script>
     <script>
       const lenis = new Lenis({

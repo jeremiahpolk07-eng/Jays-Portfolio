@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZN STACKZ Onboarding</title>
+    <title>SZN STACKZ Consultation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="onboarding.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body class="onboarding-page">
@@ -42,69 +42,15 @@
     </div>
 
     <section class="form-section">
-      <h1>Start Your Project</h1>
-      <p>Tell us about your vision - let's build your next season.</p>
+      <h1>Book Your Consultation</h1>
+      <p>The onboarding form has been removed. Schedule your consultation to get started.</p>
 
-      <form id="onboardingForm" class="onboarding-form" action="https://formspree.io/f/xykbrkly" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="New SZN STACKZ onboarding application">
-        <input type="text" name="name" id="name" placeholder="Full Name" required>
-        <input type="email" name="email" id="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
-
-        <label for="packageField">Selected Package</label>
-        <select name="package" id="packageField" required>
-          <option value="">Choose a package</option>
-          <option value="Basic">Basic</option>
-          <option value="Modern">Modern</option>
-          <option value="Luxury">Luxury</option>
-        </select>
-
-        <textarea name="project" placeholder="Describe your website goals..." required></textarea>
-
-        <input type="text" name="features" id="features" placeholder="Key Features Needed (e.g. booking, e-commerce)">
-        <input type="text" name="timeline" id="timeline" placeholder="Timeline (e.g. 2-3 weeks)">
-        <input type="text" name="inspiration" id="inspiration" placeholder="Inspiration (Paste website links)">
-
-        <label for="project-files">Upload Files (Logo, inspiration, mockups)</label>
-        <input type="file" id="project-files" name="project-files" multiple>
-
-        <h3>Select Add-ons</h3>
-
-        <div class="addons">
-          <label><input type="checkbox" name="addons" value="Appointment Booking"> Appointment Booking</label>
-          <label><input type="checkbox" name="addons" value="E-commerce Integration"> E-commerce Integration</label>
-          <label><input type="checkbox" name="addons" value="Custom Animations"> Custom Animations</label>
-          <label><input type="checkbox" name="addons" value="Photo/Video Gallery"> Photo/Video Gallery</label>
-          <label><input type="checkbox" name="addons" value="Live Chat"> Live Chat</label>
-          <label><input type="checkbox" name="addons" value="Advanced SEO"> Advanced SEO</label>
-          <label><input type="checkbox" name="addons" value="Reviews Page"> Reviews Page</label>
-        </div>
-
-        <label for="signature">Digital Signature (Type Full Name)</label>
-        <input type="text" name="signature" id="signature" placeholder="Type your full name" required>
-
-        <div class="terms-container">
-          <input type="checkbox" id="agree" required>
-          I agree to the
-          <a href="terms.html" target="_blank">Terms &amp; Conditions</a>
-          and
-          <a href="privacy.html" target="_blank">Privacy Policy</a>
-        </div>
-
-        <input type="hidden" id="dateField" name="date">
-
-        <button type="submit">Submit Project</button>
-        <p class="form-status" id="onboardingStatus"></p>
-      </form>
-    </section>
-
-    <section class="submit-confirmation" id="submitConfirmation" aria-live="polite" hidden>
-      <div class="submit-confirmation-card">
-        <h2>We have Received Your application</h2>
+      <div class="consult-cta-wrap">
+        <a href="https://calendly.com/jeremiahpolk07/30min" class="btn primary book-consult-link">Book Consult Now</a>
       </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="script.js"></script>
 </body>
 </html>

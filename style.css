@@ -2246,6 +2246,91 @@ body.home-page {
     letter-spacing: 0.04rem;
 }
 
+.consult-confirmation{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2.4rem;
+    background: rgba(2, 6, 23, 0.9);
+    z-index: 220;
+}
+
+.consult-confirmation.is-visible{
+    display: flex;
+}
+
+.consult-confirmation-card{
+    width: min(56rem, 100%);
+    padding: 4rem 2.8rem;
+    text-align: center;
+    border-radius: 2.2rem;
+    border: 1px solid rgba(142, 203, 255, 0.35);
+    background: linear-gradient(145deg, rgba(8, 13, 33, 0.95), rgba(16, 12, 38, 0.92));
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+}
+
+.consult-confirmation-card h2{
+    font-size: clamp(3.2rem, 6vw, 4.6rem);
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+
+.consult-confirmation-card p{
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: #dce6fb;
+}
+
+body.onboarding-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, rgba(79, 172, 254, 0.12), transparent 35%),
+        #020617;
+}
+
+body.onboarding-page .form-section {
+    min-height: 100vh;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 160px 20px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+body.onboarding-page .form-section h1 {
+    font-size: clamp(3rem, 6vw, 4.4rem);
+    background: linear-gradient(90deg, #4facfe, #a855f7);
+    background-clip: text;
+    color: transparent;
+}
+
+body.onboarding-page .form-section p {
+    font-size: 1.9rem;
+    line-height: 1.7;
+    color: #dce6fb;
+}
+
+body.onboarding-page .consult-cta-wrap {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    body.onboarding-page .form-section {
+        padding: 132px 16px 48px;
+    }
+
+    body.onboarding-page .form-section p {
+        font-size: 1.6rem;
+    }
+}
+
 body.home-page .navbar,
 body.pricing-page .navbar,
 body.projects-page .navbar,
